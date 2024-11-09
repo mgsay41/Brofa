@@ -1,6 +1,24 @@
 import React from "react";
+import { auth } from "../firebase/config";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
+  const handleGoogleSignup = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider);
+      // User signed up successfully
+      console.log("Google Sign up successful:", result.user);
+      // Redirect to SecondPage
+      navigate("/second-page");
+    } catch (error) {
+      console.error("Error signing up with Google:", error);
+    }
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#F7F6F0]">
       <div className="flex flex-col md:flex-row overflow-hidden p-8 md:p-0 max-w-5xl">
@@ -50,7 +68,11 @@ const Signup = () => {
               <span className="mx-4 text-black">Or</span>
               <hr className="w-full border-black" />
             </div>
-            <button className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 focus:outline-none">
+            <button
+              type="button"
+              onClick={handleGoogleSignup}
+              className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 focus:outline-none"
+            >
               <img
                 src="/Google_Icons-09-512.webp"
                 alt="Google Logo"

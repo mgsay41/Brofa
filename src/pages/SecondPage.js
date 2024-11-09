@@ -1,23 +1,18 @@
-import Footer from "../components/Footer";
-import Image from "next/image";
-import Navbar from "../components/Navbar";
+import React from "react";
 
-export default function SecondPage() {
+const SecondPage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow flex items-center justify-center py-10">
-        <div className="relative w-full max-w-2xl h-[400px] mx-4">
-          <Image
-            src="/second.png"
-            alt="Second page image"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <main className="flex-grow">
+      <div className="relative w-full h-screen">
+        <img
+          src="/second.png"
+          alt="Second Page Image"
+          className="w-full h-full object-cover"
+          style={{ maxHeight: "calc(100vh - 64px)" }}
+        />
+      </div>
+    </main>
   );
-}
+};
+
+export default SecondPage;
