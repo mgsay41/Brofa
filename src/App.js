@@ -5,6 +5,7 @@ import HeroBanner from "./components/HeroBanner";
 import SeasonCollections from "./components/SeasonCollections";
 import ProductGrid from "./components/ProductGrid";
 import Signup from "./components/Signup";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <HeroBanner />
         <SeasonCollections />
         <ProductGrid />
-        <Signup/>
+        <Signup />
+        <Footer />
         <main className="container mx-auto px-4">
           {/* Your main content here */}
         </main>

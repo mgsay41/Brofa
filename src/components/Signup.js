@@ -52,9 +52,9 @@ const Signup = () => {
             </div>
             <button className="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 focus:outline-none">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                src="/Google_Icons-09-512.webp"
                 alt="Google Logo"
-                className="w-5 h-5 mr-3"
+                className="w-6 h-6 mr-3"
               />
               SIGN UP WITH GOOGLE
             </button>
