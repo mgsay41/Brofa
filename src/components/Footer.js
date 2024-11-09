@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-black">
       <div className="max-w-7xl mx-auto py-10 px-4 md:flex md:justify-between md:items-start">
-        {/* Left Section - Updated with centering */}
+        {/* Left Section*/}
         <div className="mb-8 md:mb-0 flex flex-col items-center justify-center pt-14 pr-44">
           <h1 className="text-2xl font-bold text-center">MEJIWOO</h1>
           <p className="text-gray-500 mt-1 text-center">미지우</p>

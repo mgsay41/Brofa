@@ -10,9 +10,7 @@ const Signup = () => {
     try {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
-      // User signed up successfully
       console.log("Google Sign up successful:", result.user);
-      // Redirect to SecondPage
       navigate("/second-page");
     } catch (error) {
       console.error("Error signing up with Google:", error);
