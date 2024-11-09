@@ -44,7 +44,7 @@ const ProductGrid = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8 text-center">All Products</h1>
       
-      <div className="bg-gray-50 rounded-2xl p-8 mb-8">
+      <div style={{ backgroundColor: "#F7F6F0" }} className="rounded-2xl p-8 mb-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {products.map((product) => (
             <div key={product.id} className="flex flex-col items-center">
